@@ -5,6 +5,8 @@ const taskList = document.getElementById('task-list');
 taskForm.addEventListener('submit', function (e) {
     e.preventDefault();
     const taskText = taskInput.value.trim();
+    tasks.push(taskText);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
     if (taskText === '') return;
     const li = document.createElement('li');
     li.textContent = taskText;
