@@ -39,3 +39,7 @@ li {
     text-decoration: line-through;
     color: #aaa;
 }
+
+li button {
+    margin-left: 10px;
+}
