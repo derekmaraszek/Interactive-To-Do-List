@@ -6,7 +6,7 @@ taskForm.addEventListener('submit', function (e) {
     e.preventDefault();
     const taskText = taskInput.value.trim();
     if (taskText === '') return;
-    tasks.push(taskText);
+    tasks.push({ text: taskText, completed: false });
     localStorage.setItem('tasks', JSON.stringify(tasks));
     const li = document.createElement('li');
     li.textContent = taskText;
